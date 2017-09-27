@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>내가 처음 만드는 HTML 문서</title>
+	<meta charset = "utf-8">
+	<!-- [if lt IE 9]>
+		<script src="js/html5shiv.js"></scrip>
+	<![endif] -->
+	<style>
+		a{
+		color:red;
+		}
+		
+		aside{
+			width:200;
+			height:"auto";
+			float:"right";
+			background-color: blue;
+		}
+		figcaption{
+			color:red;
+			font-weight:bold;
+		}
+	</style>
+</head>
+<body>
+	<header id="top"> 어디로 모실까요?
+	</header>
+	
+	<section class="content">
+		<figure>
+			<img src="img/bold_face.jpg" height="200" usemap="#kissmap">
+			<map name="kissmap">
+				<area title="google" shape="rect" coords="0,0,93,200" href="http://google.com">
+				<area title="naver" shape="rect" coords="94,0,200,200" href="http://naver.com">
+			</map>
+			여기에 이것을 넣으면... 이렇게 되는군요
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcEZPanO6euvD_jFt5E7UwTY3xK7XDSiqv3Ei-qzupo-6KpP13" height="200">
+			<figcaption>These images are for test...These images are for test...These images are for test...</figcaption>
+		</figure>
+		
+		<form action="" method="post">
+			<ul>
+				<fieldset><legend>입력하세요...</legend>
+				<li>이름 : <input type="text" id="user_name"></li>
+				<li>메일 : <input type="text" id="user_mail"></li>
+				</fieldset>
+				<fieldset><legend>눌러주세요...</legend>
+				<li><input type="submit" value="가입하기"></li>
+				</fieldset>
+				
+			</ul>
+		</form>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/3adkZenmIC8" frameborder="0" allowfullscreen></iframe>
+		<video width="300" height="200" controls>
+		<source src="video/그림자극.mp4">
+		<track kind="captions" src="desc.vtt" charset = "utf-8" srclang="ko" label="korean" default></video>
+		<br><br>
+		<audio src="video/그림자극.mp4" controls></audio>
+		<p> 오리날다 </p>
+
+		<!-- 여기는 주석입니다.
+		-->
+
+		<article>
+		<h2>first headline</h2>
+		<h3>second headline</h3>
+			<p>This is my first <b><i>sentence</i></b>. <mark>This is my first sentence.This is my first sentence.This is my first sentence.This is my first sentence.This is my first sentence.This is my first s<sup>e</sup>nt<sub>en</sub>ce.<s>This is my first sentence.</s></mark></p>
+
+			<p><strong>This</strong> is <em>my first sentence</em>. This is my first sentence.<br>This is my first sentence.<q>This is my first</q> sentence.This is my first sentence.<blockquote>This is my first sentence.This is my first sentence.This is my first sentence.</blockquote></p>
+
+			<p> 김인수의 홈페이지 <a target="_blank" href="http://www.lastkiss.net"> (Go) </a></p>
+		</article>
+		<!-- <iframe src="http://lastkiss.net/htmlstudy/first.html" width="50%" height="90%"></iframe> -->
+
+		<aside> why 	
+			<nav class="navi">
+				<ol>
+					<li><a href="http://lastkiss.net">이용안내</a></li>
+					<li><a href="#table1" title="링크없음">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcEZPanO6euvD_jFt5E7UwTY3xK7XDSiqv3Ei-qzupo-6KpP13" height="200">
+						</a>
+					</li>
+				</ol>
+			</nav>
+		</aside>
+		<table border="1">
+			<caption> Table Test</caption>
+			<col style="background: blue">
+			<colgroup span="2" style="background: skyblue">
+			<thead>
+				<tr>
+					<th colspan="2">1행1열</th>	
+					<th>1행2열</th>	
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan ="2"> footer입니다.</td>
+					<td> footer</td>
+				</tr>
+			</tfoot>
+			<tbody>
+			<tr>
+					<td rowspan="2">2행1열</td>	
+					<td>2행2열</td>	
+					<td>2행3열</td>	
+				</tr>
+				<tr>
+					<td id="table1">3행1열</td>	
+					<td>3행2열</td>	
+	<!-- 				<td>3행3열</td>	
+ -->			</tr>
+			</tbody>
+		</table>	
+	</section>		
+</body>
+</html>
