@@ -14,35 +14,9 @@
 	}
 }
 
-#company-logo{
-	border-radius: 50%;
-}
-
-#name{
-	margin-top: 15px;
-	margin-bottom: 0px;
-	text-align: right;
-	color:#747704;
-	text-transform:uppercase;
-
-}
-
-#nickname{
-	margin-top: 0px;
-	margin-bottom: 5px;
-	color:#747704;
-	text-transform:uppercase;
-	text-align: right;
-
-}
-
 body{
-	max-width:700px;
+	max-width:800px;
 	margin: 0 auto;
-}
-
-#page-wrap{
-	margin:10px;
 }
 
 h2{
@@ -66,6 +40,38 @@ hr{
 	padding:0;
 }
 
+#company-logo{
+	border-radius: 50%;
+}
+
+#name{
+	margin-top: 15px;
+	margin-bottom: 0px;
+	text-align: right;
+	color:#747704;
+	text-transform:uppercase;
+
+}
+
+#nickname{
+	margin-top: 0px;
+	margin-bottom: 5px;
+	color:#747704;
+	text-transform:uppercase;
+	text-align: right;
+
+}
+
+
+#page-wrap{
+	margin:10px;
+}
+
+#sunflower{
+	padding-right:10px;
+	padding-left:10px;
+}
+
 .row{
 	width: 100%;
     display:flex;
@@ -86,7 +92,8 @@ hr{
 
 .col-4 {
 	width: 33.33%;
-	min-width: 150px;
+	min-width: 130px;
+	max-width: 253px;
 }
 
 .col-5 {
