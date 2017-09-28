@@ -48,10 +48,12 @@ figcaption {
 			<ul>
 				<fieldset>
 					<legend>입력하세요...</legend>
-					<li>이름 : <input type="text" id="user_name" value=" name here..."></li>
-					<li>메일 : <input type="text" id="user_mail"></li>
-					<label>비밀번호: <input type="password" id="user_pw" size="10"></label>
-					<label>검색기: <input type="search"><input type="submit" value="검색"></label>
+					<li>이름 : <input type="text" id="user_name"
+						placeholder=" name here..."></li>
+					<li>메일 : <input type="text" id="user_mail"></li> <label>비밀번호:
+						<input type="password" id="user_pw" size="10">
+					</label> <label>검색기: <input type="search"><input
+						type="submit" value="검색"></label>
 				</fieldset>
 				<fieldset>
 					<legend>눌러주세요...</legend>
@@ -59,15 +61,41 @@ figcaption {
 				</fieldset>
 				<li>소식지수신 <label> <input type="radio" value="yes"
 						name="letter"> 수신
-				</label> <label> <input type="radio" value="no" name="letter">미수신
+				<label> <input type="radio" value="no" name="letter">미수신
 				</label>
+				</label> 
 				</li>
-
 			</ul>
+			<input type="number">
+			<input type="range">
+			<input type="date" id="start">
+			<input type="time" id="start">
+			<input type="file">
 		</form>
-		<iframe width="560" height="315"
+		<input type="color">
+		<select id="class" size="3" multiple>
+			<option value="a">건축공학</option>
+			<option value="b" selected>기계공학</option>
+		</select>
+		
+		<input type="text" list="a-list">
+		<datalist id="a-list" >
+			<option value="iOS"></option>
+			<option value="Android"></option>
+			<option value="Win8"></option>
+		</datalist>	
+		<textarea cols="50" rows="5">원하는게 뭐요?</textarea>
+		
+		<form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+			<input type="number" name="num1" value="10"> +
+			<input type="number" name="num2" value="10"> =
+			<output name="result" for="num1 num2" ></output>
+		</form>
+		<progress value="10" max="100"></progress>10%
+		<meter value="10" max="100"></meter>10%
+		<!-- <iframe width="560" height="315"
 			src="https://www.youtube.com/embed/3adkZenmIC8" frameborder="0"
-			allowfullscreen></iframe>
+			allowfullscreen></iframe> -->
 		<video width="300" height="200" controls>
 			<source src="video/그림자극.mp4">
 			<track kind="captions" src="desc.vtt" charset="utf-8" srclang="ko"
