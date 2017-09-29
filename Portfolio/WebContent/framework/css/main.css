@@ -40,6 +40,10 @@ hr{
 	padding:0;
 }
 
+p{
+	line-height:5em;
+}
+
 #company-logo{
 	border-radius: 50%;
 }
