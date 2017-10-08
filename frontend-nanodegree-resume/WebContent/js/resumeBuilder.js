@@ -2,96 +2,98 @@
 This is empty on purpose! Your code to build the resume will go here.
  */
 
- $("#main").append("Insoo Kim");
- $("#main").append(" is awesome.");
- $("#main").append(" is awesome.");
- var firstName = "Insoo";
+//$("#main").prepend("<h1>Insoo Kim</h1>");
+
+ //$("#main").append("insoo kim");
+ //$("#main").append(" is awesome.");
+ //$("#main").append(" is awesome.");
+ var firstname = "insoo";
  var age = 47;
- console.log(firstName);
+ console.log(firstname);
 
  var email="lastkiss@lastkiss.net";
- var name="Insoo Kim";
- var role="Developer";
- // var newEmail = email.replace("lastkiss", "gmail");
+ var name="insoo kim";
+ var role="developer";
+ // var newemail = email.replace("lastkiss", "gmail");
  console.log(email);
- var formattedName = HTMLheaderName.replace("%data%", name);
- var formattedRole = HTMLheaderRole.replace("%data%", role);
+ var formattedname = HTMLheaderName.replace("%data%", name);
+ var formattedrole = HTMLheaderRole.replace("%data%", role);
 
- $("#header").prepend(formattedRole).prepend(formattedName);
+ $("#main").prepend(formattedrole).prepend(formattedname);
 
- var s = "audacity";
+// var s = "audacity";
 
- var udacityizer = function(s) {  
-    s=s.slice(1);
-    s=s.charAt(0).toUpperCase() + s.slice(1);
-    return s;
- };
-
-// Did your code work? The line below will tell you!
-console.log(udacityizer(s));
-
-var sampleArray = [0,0,7];
-
-var incrementLastArrayElement = function(_array) {
-    var newArray = [];
-    // Your code should make newArray equal to an array that has the same
-    // values as _array, but the last number has increased by one.
-    
-    // For example:
-    // _array = [1, 2, 3];
-    // turns into:
-    // newArray = [1, 2, 4];
-    
-    // Your code goes in here!
-
-    for(var i=0;i<_array.length; i++){
-        newArray[i] = _array[i];
-    }
-    
-    newArray[_array.length - 1] += 1;
-    newArray[_array.length] = 1;
-    
-    // Don't delete this line!
-    return newArray;
-};
-
-// // Did your code work? The line below will tell you!
-// console.log(incrementLastArrayElement(sampleArray));
-
-// var name = "AlbERt EINstEiN";
-
-// function nameChanger(oldName) {
-//     var finalName = oldName;
-//     // Your code goes here!
-
-//     var names = finalName.split(' ');
-//     var firstName = names[0].toLowerCase().charAt(0).toUpperCase() 
-//     + names[0].toLowerCase().slice(1);
-//     var lastName = names[1].toUpperCase();
-    
-//     finalName = firstName + " " + lastName;
-    
-//     // Don't delete this line!
-//     return finalName;
+// var udacityizer = function(s) {  
+//    s=s.slice(1);
+//    s=s.charat(0).touppercase() + s.slice(1);
+//    return s;
 // };
 
-// Did your code work? The line below will tell you!
-// console.log(nameChanger(name));
+//// did your code work? the line below will tell you!
+//console.log(udacityizer(s));
 
-var bio = {
-	"name":name,
-	"role":role,
-	"contacts":{
-		"email":"bettertoday@gmail.com",
-		"mobile":"010-3932-8848"
-	},
+//var samplearray = [0,0,7];
 
-	"bioPic":"images/fry.jpg",
-	"welcomeMessage": "welcome!",
-	"skills":["Java", "Java Script"]
-}
+//var incrementlastarrayelement = function(_array) {
+//    var newarray = [];
+//    // your code should make newarray equal to an array that has the same
+//    // values as _array, but the last number has increased by one.
+    
+//    // for example:
+//    // _array = [1, 2, 3];
+//    // turns into:
+//    // newarray = [1, 2, 4];
+    
+//    // your code goes in here!
 
-var formattedContact 
-		= HTMLcontactGeneric.replace("%data%", bio.contacts.email)
-				.replace("%contact%", "email");
-$("#topContacts").append(formattedContact);
+//    for(var i=0;i<_array.length; i++){
+//        newarray[i] = _array[i];
+//    }
+    
+//    newarray[_array.length - 1] += 1;
+//    newarray[_array.length] = 1;
+    
+//    // don't delete this line!
+//    return newarray;
+//};
+
+// // did your code work? the line below will tell you!
+// console.log(incrementlastarrayelement(samplearray));
+
+// var name = "albert einstein";
+
+// function namechanger(oldname) {
+//     var finalname = oldname;
+//     // your code goes here!
+
+//     var names = finalname.split(' ');
+//     var firstname = names[0].tolowercase().charat(0).touppercase() 
+//     + names[0].tolowercase().slice(1);
+//     var lastname = names[1].touppercase();
+    
+//     finalname = firstname + " " + lastname;
+    
+//     // don't delete this line!
+//     return finalname;
+// };
+
+// did your code work? the line below will tell you!
+// console.log(namechanger(name));
+
+//var bio = {
+//	"name":name,
+//	"role":role,
+//	"contacts":{
+//		"email":"bettertoday@gmail.com",
+//		"mobile":"010-3932-8848"
+//	},
+
+//	"biopic":"images/fry.jpg",
+//	"welcomemessage": "welcome!",
+//	"skills":["java", "java script"]
+//}
+
+//var formattedcontact 
+//		= htmlcontactgeneric.replace("%data%", bio.contacts.email)
+//				.replace("%contact%", "email");
+//$("#topcontacts").append(formattedcontact);
