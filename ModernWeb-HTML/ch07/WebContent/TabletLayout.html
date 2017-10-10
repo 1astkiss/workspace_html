@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chapter 7</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            min-width: 760px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #top_fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #main_header {
+            height: 60px;
+            line-height: 60px;
+            padding-left: 10px;
+            border-bottom: 1px solid black;
+            background: #1d4088;
+            color: white;
+        }
+
+        #main_gnb {
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: #32394a;
+        }
+
+            #main_gnb > ul.left {
+                overflow: hidden;
+                float: left;
+            }
+
+            #main_gnb > ul.right {
+                overflow: hidden;
+                float: right;
+            }
+
+            #main_gnb > ul.left > li {
+                float: left;
+            }
+
+            #main_gnb > ul.right > li {
+                float: left;
+            }
+
+            #main_gnb a {
+                display: block;
+                padding: 10px 20px;
+                border-left: 1px solid #5f6673;
+                border-right: 1px solid #242a37;
+                color: white;
+                font-weight: bold;
+            }
+
+        #main_lnb {
+            background: #71b1d1;
+            float: left;
+            width: 200px;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            bottom: 0;
+        }
+
+            #main_lnb > ul > li > a {
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                padding-left: 15px;
+                border-top: 1px solid #96d6f6;
+                border-bottom: 1px solid #6298b2;
+                color: white;
+                font-weight: bold;
+            }
+
+        #wrap > #content_wrap {
+            float: left;
+            width: calc(100% - 200px);
+            /* margin-right: -200px; */
+        }
+
+            #wrap > #content_wrap > #content {
+                /* padding-right: 200px; */
+            }
+
+        #content {
+            background: white;
+            border-left: 1px solid black;
+            margin-left: 200px;
+            margin-top: 100px;
+        }
+
+        article {
+            padding: 10px;
+        }
+
+        #main_footer {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top_fixed">
+        <header id="main_header">
+            <h1>Fluid</h1>
+        </header>
+        <nav id="main_gnb">
+            <ul class="left">
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+        </nav>
+    </div>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+        </nav>
+    <div id="content_wrap">
+        <div id="content">
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>
+            <article>
+                <h1>Lorem ipsum dolor sit amet</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est laborum.
+                </p>
+            </article>
+        </div> <!--content-->
+    </div> <!--content_wrap-->
+    <footer id="main_footer">
+        <h3>HTML5 + CSS3 Basic</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+
+</html>
