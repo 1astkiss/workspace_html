@@ -13,6 +13,7 @@
     height: 50px;
     background-color: orange;
     margin: 5px;
+    transition: 
     transition-property: background-color, width;
     transition-duration: 1s, 5s;
 }
