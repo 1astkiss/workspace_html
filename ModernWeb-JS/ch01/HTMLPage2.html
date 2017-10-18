@@ -5,9 +5,43 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-        for (var i = 0; i < 3; i++) {
-            setTimeout(() => { alert(i); }, 1000 * i);
+        //for (var i = 0; i < 3; i++) {
+        //    setTimeout(() => { alert(i); }, 1000 * i);
+        //}
+
+        //function b() { alert("b"); };
+
+        //function a() {
+        //    return function b() { alert("b"); };
+        //};
+
+        //var c = a();
+        //c();
+        //c();
+
+        //function test(name) {
+        //    var output;
+        //}
+
+        //function d() { alert("<p>" + new Date() + "<p>") }
+
+        //var intervalID = setInterval(d, 1000);
+        //setTimeout(function () { clearInterval(intervalID); }, 5000);
+
+        //alert(Number("123a"));
+        //alert(parseInt("b123a4"));
+
+        var person = {
+            name: "Insoo",
+            eat: function (food) { alert(this.name + "안녕" );}
         }
+        //person.eat();
+
+        for (var key in person) {
+            alert(person[key]);
+        }
+
+        
     </script>
 </head>
 <body>
