@@ -55,14 +55,49 @@
 
         //document.write(output);
 
-        var date = new Date();
+        //var date = new Date();
 
-        alert(date.getDate());
+        //alert(date.getDate());
 
-        
+        //var output = "";
+        //for (var key in window) {
+        //    output += "*" + key + ": " + window[key] + "\n";
+        //}
+
+        //alert(output);
+
+        //var child = window.open();
+        //child.close();
+
+        //var audio = new Audio('Kalimba.mp3');
+        //var userAgent = navigator.userAgent;
+        //alert(userAgent);
+
+        window.onload = function () {
+            var header = document.createElement('h1');
+            var textNode = document.createTextNode("Hello DOM");
+
+            header.appendChild(textNode);
+            document.body.appendChild(header);
+
+            var img = document.createElement("img");
+            img.src = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQcWzAJb0c3t1waqim9j4-vBqXWHXcgjzV8FRARcxTOp8wxtvBc";
+            img.width = 500;
+            img.height = 350;
+            document.body.appendChild(img);
+
+            document.body.innerHTML += "<h1>Document Object Model</h1>";
+            var hdr2 = document.getElementById("header2");
+            hdr2.innerHTML = '<h1>Document Object Mode</h1>';
+            hdr2.textContent += '<h1>Document Object Mode</h1>';
+        };
     </script>
 </head>
 <body>
+
+    <button onclick="audio.play()">PLAY</button>
+    <button onclick="audio.pause()">Pause</button>
+    <h2 id="header2">aaa</h2>
 
 </body>
 </html>
