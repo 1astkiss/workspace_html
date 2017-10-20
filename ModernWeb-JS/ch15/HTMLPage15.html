@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('h1').addClass(function (index) {
+                return 'class' + index;
+            });
+
+            $('h1').toggleClass('selected');
+            var src = $('img').attr('src');
+            alert(function (index) { return src[index] });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>Header-0</h1>
+    <h1>Header-1</h1>
+    <h1>Header-2</h1>
+    <img src="a" />
+    <img src="b" />
+
+</body>
+</html>
