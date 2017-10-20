@@ -8,15 +8,42 @@
     <!--<script src="jquery-2.1.0-vsdoc.js"></script>-->
     <script>
         $(document).ready(function () {
-            alert("ready!!!");
+            //alert("ready!!!");
+            //setTimeout(function () {
+            //    var value = $('select > option:selected').val();
+            //    alert(value);
+            //}, 5000)
+
+            var array = [
+                { name: "Hanbit", link: "http://hanbit.co.kr" },
+                {name: "naver", link: "http://naver.com" },
+                {name: "daum", link: "http://daum.net" }
+            ];
+
+            $.each(array, function (index, item) {
+                var output = "";
+                output += '<a href="' + item.link + '">'; 
+                output += ' <h1>' + item.name + '</h1>';
+                output += '</a>';
+
+                document.body.innerHTML += output;
+            })
         });
     </script>
     <style>
     </style>
 </head>
 <body>
-    <h1 id="clock"></h1>
     <h1 id="sun">@</h1>
+    <h1 id="clock"></h1>
     <h1 id="moon">*</h1>
+
+    <select>
+        <option>Apple</option>
+        <option>Bag</option>
+        <option>Cat</option>
+        <option>Dog</option>
+        <option>Elephant</option>
+    </select>
 </body>
 </html>
