@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+        //var canvas = document.getElementById('canvas');
+        //var context = canvas.getContext('2d');
+        //alert(context);
+        //context.beginPath();
+        //context.moveTo(100, 150);
+        //context.lineTo(200, 250);
+        //context.stroke();
+
+        $(document).ready(function () {
+
+            $('h1').click(function () {
+                $(this).html(function (index, html) {
+                    return html + '*';
+                });
+
+                setInterval(function () {
+                    $('h1').last().trigger('click');
+                }, 1000);
+            });
+
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+           
+
+            $(canvas).on({
+                mousedown: function (event) {
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+                    context.beginPath();
+                    context.moveTo(x, y);
+                },
+                mouseup: function (event) {
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+                    context.lineTo(x, y);
+                    context.stroke();
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="400" style="border: 3px solid black">
+
+    </canvas>
+    <h1>Start: </h1>
+    <h1>Start: </h1>
+</body>
+</html>
