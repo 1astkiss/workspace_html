@@ -4,9 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <style>
-
-    </style>
     <script src="jquery-3.2.1.js"></script>
     <script>
         $(document).ready(function () {
@@ -16,17 +13,63 @@
 
             $('h1').toggleClass('selected');
             var src = $('img').attr('src');
-            alert(function (index) { return src[index] });
+            $('img').attr('width', function (index) {
+                return (index + 1) * 100;
+            });
+
+            //$('h1').removeAttr('class');
+            var color = $('h1:nth-child(2)').css('color');
+            var output = src[0];
+            output += src[1];
+            //var colorArray = ['red', 'orange', 'purple'];
+            //$('h1').css('color', function (index) {
+            //    return colorArray[index];
+            //});
+            //$('h1').css('backgroundColor', 'black');
+            //alert(color);
+            $('h1').html(function (i, h) { return h + i; });
+            $('h1').eq(1).empty();
+            $('<h4></h4>').html('cc').appendTo('body');
+            $('h1').last().prependTo('div').clone();
+            setInterval(function () { $('img').first().appendTo('#car-gallery') }, 2000);
+
+            $('h1').on({
+                click: function () {
+                    $(this).addClass('reverse');
+                    $(this).addClass('orangeFont');
+                    $(this).one(function () { alert("this"); });
+                },
+                mouseover: function () {
+                    $(this).addClass('reverse');
+                },
+                mouseleave: function () { $(this).removeClass('reverse') },
+
+            });
+
+            $('h1').one({ click: function () { alert("this"); } });
         });
 
+
     </script>
+    <style>
+        .first {
+            color: red;
+        }
+        .reverse {background:orange;}
+        .orangeFont {color:orange;}
+
+    </style>
 </head>
 <body>
-    <h1>Header-0</h1>
+    <h1 class="first">Header-0</h1>
+    <h1>Header-1</h1>
     <h1>Header-1</h1>
     <h1>Header-2</h1>
-    <img src="a" />
-    <img src="b" />
+    <div id="car-gallery">
+        <img src="images/car1.jpg" />
+        <img src="images/car2.jpg" />
+        <img src="images/car3.jpg" />
+    </div>
 
 </body>
 </html>
