@@ -1,4 +1,5 @@
 /.metadata/
-/.vs/config
-/.vs/slnx.sqlite
-/.vs/VSWorkspaceState.json
+.vs/config/applicationhost.config
+.vs/slnx.sqlite
+.vs/workspace_html/v15/.suo
+.vs/VSWorkspaceState.json
