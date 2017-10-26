@@ -48,7 +48,7 @@ app.all('/data.xml', function (request, response) {
         output += '<product>';
         output += '     <name>' + item.name + '</name>';
         output += '     <price>' + item.price + '</price>';
-        output += '<product>';
+        output += '</product>';
     });
 
     output += '</products>';
