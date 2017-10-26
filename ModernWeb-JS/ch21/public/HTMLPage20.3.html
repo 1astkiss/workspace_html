@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        img {
+            width: 100%
+        }
+
+        body {
+            width: 700px;
+            margin: 0px auto;
+        }
+    </style>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+
+        $.fn.pivot = function (options) {
+            var $target = $(this);
+            var $items = $target.children();
+            var $container = $target.wrap('<div></div>').parent();
+            var option = { width: 500, height: 450 };
+
+            $.extend(option, options);
+
+            $target.css({
+                width: $items.length * option.width,
+                height: option.height,
+                position: 'absolute'
+            });
+
+            $items.css({
+                float: 'left',
+                width: option.width,
+                height: option.height
+            });
+
+            $container.css({
+                overflow: 'hidden',
+                position: 'relative',
+                width: option.width,
+                height: option.height
+            });
+
+            var originalLeft = 0;
+            var oldLeft = 0;
+            var nowPosition = 0;
+            var isDown = false;
+
+            $target.on('mousedown', function (event) {
+                oldLeft = originalLeft = event.clientX;
+                isDown = true;
+                event.preventDefault();
+            });
+
+            $target.on('mousemove', function (event) {
+                if (isDown) {
+                    var distance = oldLeft - event.clientX;
+                    oldLeft = event.clientX;
+
+                    $target.animate({ left: '-=' + distance }, 0);
+                    $target.stop(true);
+                }
+                event.preventDefault();
+            });
+
+            $target.on('mouseup', function (event) {
+
+                function movePosition(direction) {
+                    var changePosition = nowPosition + direction;
+
+                    if (0 <= changePosition && changePosition < $items.length) {
+                        nowPosition = changePosition;
+                    }
+                }
+
+                if ((originalLeft - event.clientX) > (option.width / 4)) {
+                    movePosition(+1);
+
+                } else if ((originalLeft - event.clientX) < -(option.width / 4)) {
+                    movePosition(-1);
+                }
+
+                $target.animate({
+                    'left': -nowPosition * option.width
+                }, 'fast');
+
+                isDown = false;
+                event.preventDefault();
+            });
+
+        };
+
+        $(document).ready(function () {
+            $('#pivot_slider').pivot({
+                width: 700,
+                height: 450
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="pivot_slider">
+        <div>
+            <h1>Lorem ipsum</h1>
+            <img src="Desert.jpg" />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+        </div>
+        <div>
+            <h1>Sed scelerisque</h1>
+            <img src="Hydrangeas.jpg" />
+            <p>
+                Sed scelerisque molestie elementum. Fusce et felis eros.
+            </p>
+        </div>
+        <div>
+            <h1>Quisque sit amet</h1>
+            <img src="Jellyfish.jpg" />
+            <p>
+                Quisque sit amet suscipit lacus.
+            </p>
+        </div>
+        <div>
+            <h1>Aliquam placerat</h1>
+            <img src="Koala.jpg" />
+            <p>
+                Aliquam placerat, nunc vitae finibus maximus
+            </p>
+        </div>
+    </div>
+</body>
+</html>
