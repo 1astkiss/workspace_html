@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Ajax Basic</title>
+    <script src="jquery-3.2.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#get').click(function () {
+                $.ajax({
+                    url: '/products',
+                    type: 'get',
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            $('#post').click(function () {
+                $.ajax({
+                    url: '/products',
+                    type: 'post',
+                    dataType: 'text',
+                    data: {
+                        name: $('#name').val(),
+                        price:$('#price').val()
+                    },
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            $('#put').click(function () {
+                $.ajax({
+                    url: '/products/0',
+                    type: 'put',
+                    dataType: 'text',
+                    data: {
+                        name: $('#name').val(),
+                        price: $('#price').val()
+                    },
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            $('#delete').click(function () {
+                $.ajax({
+                    url: '/products/0',
+                    type: 'delete',
+                    dataType: 'text',
+                    success: function (data) {
+                        $('#output').val(data);
+                    }
+                });
+            });
+
+            var data = {
+                name: 'RintIanTta',
+                region: 'seoul'
+            };
+
+            $('<h1></h1>').text($.param(data)).appendTo('body');
+
+            $('#my-form').submit(function (event) {
+                $('#wrap').load('/parameter', $(this).serialize());
+                event.preventDefault();
+            })
+
+            $(document).ajaxComplete(function () {
+                $('#ajax-event').append('<h1>AjaxComplete</h1>')
+            }).
+        });
+    </script>
+</head>
+
+<body>
+    <button id="get">GET</button>
+    <button id="post">POST</button>
+    <button id="put">PUT</button>
+    <button id="delete">DELETE</button>
+
+    <h1>input</h1>
+    <input id="name" placeholder="name" />
+    <input id="price" placeholder="price" />
+    <h1>output</h1>
+    <textarea id="output" disabled="disabled" cols="50" rows="5"></textarea>
+
+    <form id="my-form">
+        <table>
+            <tr>
+                <td><label for="name">Name</label></td>
+                <td><input id="name" name="name" type="text"/></td>
+            </tr>
+            <tr>
+                <td><label for="region">Region</label></td>
+                <td><input id="region" name="region" type="text"/></td>
+            </tr>
+        </table>
+        <input type="submit" value="Get Ajax String" />
+    </form>
+    <div id="wrap">
+
+    </div>
+    <div id="ajax-event"></div>
+</body>
+</html>
