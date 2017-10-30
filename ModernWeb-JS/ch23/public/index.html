@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Ajax Basic</title>
+    <script src="jquery-3.2.1.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $.ajax({
+                url: 'data.xml',
+                success: function (data) {
+                    $(data).find('product').each(function () {
+                        var name = $(this).find('name').text();
+                        var price = $(this).find('price').text();
+                        $('<h1></h1>').text(name + ':' + price).prependTo('body');
+                    });
+                }
+            });
+
+            $.ajax('/data.html', {
+                success: function (data) {
+                    $('body').append(data);
+                }
+            });
+
+            $.ajax({
+                url: '/parameter',
+                type: 'GET',
+                data: {
+                    name: 'test',
+                    region:'test'
+                },
+                success: function (data) {
+                    $('body').append(data);
+                }
+            });
+
+            $.get('/data.html', function (data) {
+                $('body').append(data);
+            });
+
+            $.getJSON('/data.json', function (data) {
+                $.each(data, function (key, value) {
+                    $('body').append('<h1>' + value.name + ':' + value.price + '</h1>');
+                });
+            });
+
+            //$('body').load('/data.html');
+
+        });
+    </script>
+</head>
+
+<body>
+   
+</body>
+</html>
