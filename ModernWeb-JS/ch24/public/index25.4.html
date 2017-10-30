@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>redirect Client</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                //url: 'http://www.kma.go.kr/weather/forecast/mid-term-rss3.jsp?stnId=108',
+                url: '/data.redirect',
+                success: function (data) {
+                    $('body').text(data);
+                }
+            });
+        });
+
+        //window.test = function test(input) {
+        //    alert(input.data);
+        //};
+
+        //var script = document.createElement('script');
+        //script.src = 'https://api.github.com/repos/vmg/redcarpet/issues?callback=test';
+        //document.head.appendChild(script);
+
+    </script>
+    <!--<script src="https://api.github.com/repos/vmg/redcarpet/issues?callback=test"></script>-->
+</head>
+<body>
+    
+</body>
+</html>
