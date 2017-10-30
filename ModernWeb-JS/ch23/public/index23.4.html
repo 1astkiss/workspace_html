@@ -24,7 +24,7 @@
                     dataType: 'text',
                     data: {
                         name: $('#name').val(),
-                        price:$('#price').val()
+                        price: $('#price').val()
                     },
                     success: function (data) {
                         $('#output').val(data);
@@ -68,11 +68,19 @@
             $('#my-form').submit(function (event) {
                 $('#wrap').load('/parameter', $(this).serialize());
                 event.preventDefault();
-            })
+            });
 
             $(document).ajaxComplete(function () {
                 $('#ajax-event').append('<h1>AjaxComplete</h1>')
-            }).
+            }).ajaxError(function () {
+                $('#ajax-event').append('<h1>AjaxError</h1>')
+            }).ajaxSend(function () {
+                $('#ajax-event').append('<h1>AjaxSend</h1>')
+            }).ajaxSuccess(function () {
+                $('#ajax-event').append('<h1>AjaxSuccess</h1>')
+            }).ajaxStart(function () {
+                $('#ajax-event').append('<h1>AjaxStart</h1>')
+            });
         });
     </script>
 </head>
