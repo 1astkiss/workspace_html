@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>DB Basic</title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.ajax('https://api.github.com/repos/vmg/redcarpet/issues', {
+                dataType: 'jsonp',
+                success: function (input) {
+                    $.each(input.data, function (index, item) {
+                        var a = $('<h2></h2').html(item.id);
+                        var b = $('<a></a>').attr('href', item.html_url)
+                            .html(item.html_url);
+                        var c = $('<hr .\/>');
+                        $('<div></div>').append(a, b, c).appendTo('body');
+                    });
+                }
+            });
+        });
+
+        //window.test = function test(input) {
+        //    alert(input.data);
+        //};
+
+        //var script = document.createElement('script');
+        //script.src = 'https://api.github.com/repos/vmg/redcarpet/issues?callback=test';
+        //document.head.appendChild(script);
+
+    </script>
+    <!--<script src="https://api.github.com/repos/vmg/redcarpet/issues?callback=test"></script>-->
+</head>
+<body>
+    
+</body>
+</html>
