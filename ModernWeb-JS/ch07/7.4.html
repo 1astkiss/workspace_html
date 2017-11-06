@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function Rectangle(w, h) {
+            var width = w;
+            var height = h;
+
+            this.getWidth = function () { return width; };
+            this.setWidth = function (w) {
+                width = w;
+            };
+            this.getHeight = function () { return height; }
+        }
+
+        Rectangle.prototype.getArea = function () { return this.getWidth() * this.getHeight(); }
+
+        function Square(length) {
+            this.base = Rectangle;
+            this.base(length, length);
+        }
+
+        Square.prototype = Rectangle.prototype;
+        Square.prototype.constructor = Square;
+
+
+        var bb = new Square(4);
+        var aa = new Rectangle(3, 5);
+        alert(bb instanceof Rectangle);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

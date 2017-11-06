@@ -5,6 +5,47 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
+
+        var aa = {
+            aa: 273,
+            bb: "skt",
+            'c c': 123,
+            output : "inner output : "
+        }
+
+        var output = '';
+        with (aa) {
+            window.output += aa + ':';
+            window.output += bb + ':';
+
+        };
+
+        alert(output);
+        //alert(`${aa.aa} : ${aa.bb} : ${aa['c c']}`);
+        //function test(a, b, c, d) {
+        //    alert(`${a}:${b}:${c}:${d};${c + d}`);
+        //}
+
+        //var array = [1, 2];
+        //test(...array, ...array);
+
+        //function test(a, b, ...num) {
+        //    alert(
+        //        arguments[0] + ","+
+        //        arguments[1] + ","+
+        //        arguments[2] + ","+
+        //        arguments[3] + ","+
+        //        arguments[4] + ","
+        //    );
+        //}
+
+        //test(1, 2, 3, 4, 5);
+
+        //var aa = test('javascript')();
+
+        //var cc = ((a, b) => a + b)(1, 2);
+        //alert(cc);
+        //eval('alert(aa)');
         //for (var i = 0; i < 3; i++) {
         //    setTimeout(() => { alert(i); }, 1000 * i);
         //}
