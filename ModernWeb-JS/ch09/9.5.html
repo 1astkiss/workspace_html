@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+<script>
+    //var output = '';
+    //for (var key in navigator) {
+    //    output += key + " : " + navigator[key] + "<br>";
+    //}
+
+    
+    document.write(navigator.userAgent + '<br>');
+    document.write(window.orientation + '<br>');
+    var audio = new Audio('kalimba.mp3');
+</script>
+</head>
+
+<body>
+    <button onclick="audio.play()">play</button>
+    <button onclick="audio.pause()">pause</button>
+</body>
+</html>

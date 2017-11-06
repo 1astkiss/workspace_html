@@ -5,13 +5,27 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-        var student = {
-            name: '윤명월',
-            grade: "1학년",
-            toDel: function () { alert("this is...") }
-        }
+        //var student = {
+        //    name: '윤명월',
+        //    grade: "1학년",
+        //    toDel: function () { alert("this is...") }
+        //}
 
-        alert(student);
+        //alert(student);
+        var fixedNumber = (273.52150332).toExponential(2);
+        var ff = 123;
+        var date1 = new Date(2001, 0, 1, 1, 1, 1, 1);
+        var date2 = new Date(2001, 0, 2, 1, 1, 1, 1);
+        var date = date2 - date1;
+        var numArr = [1, 2, 3,4,5];
+        document.writeln(numArr[1]);
+        document.writeln(Array.isArray(numArr));
+        var result = numArr.reduceRight(function (pV, cV) {
+            document.writeln(pV);
+            return pV + cV;
+        });
+        document.writeln(result);
+       
     </script>
 </head>
 <body>
