@@ -21,35 +21,39 @@
         $(document).ready(function () {
 
             $('h1').click(function () {
-                $(this).html(function (index, html) {
-                    return html + '*';
-                });
-
-                setInterval(function () {
-                    $('h1').last().trigger('click');
-                }, 1000);
+                $(this).html('click');
+                $(this).off();
             });
+            //$('h1').click(function () {
+            //    $(this).html(function (index, html) {
+            //        return html + '*';
+            //    });
 
-            var canvas = document.getElementById('canvas');
-            var context = canvas.getContext('2d');
+            //    setInterval(function () {
+            //        $('h1').last().trigger('click');
+            //    }, 1000);
+            //});
+
+            //var canvas = document.getElementById('canvas');
+            //var context = canvas.getContext('2d');
            
 
-            $(canvas).on({
-                mousedown: function (event) {
-                    var position = $(this).offset();
-                    var x = event.pageX - position.left;
-                    var y = event.pageY - position.top;
-                    context.beginPath();
-                    context.moveTo(x, y);
-                },
-                mouseup: function (event) {
-                    var position = $(this).offset();
-                    var x = event.pageX - position.left;
-                    var y = event.pageY - position.top;
-                    context.lineTo(x, y);
-                    context.stroke();
-                }
-            });
+            //$(canvas).on({
+            //    mousedown: function (event) {
+            //        var position = $(this).offset();
+            //        var x = event.pageX - position.left;
+            //        var y = event.pageY - position.top;
+            //        context.beginPath();
+            //        context.moveTo(x, y);
+            //    },
+            //    mouseup: function (event) {
+            //        var position = $(this).offset();
+            //        var x = event.pageX - position.left;
+            //        var y = event.pageY - position.top;
+            //        context.lineTo(x, y);
+            //        context.stroke();
+            //    }
+            //});
         });
 
     </script>
