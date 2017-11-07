@@ -7,12 +7,25 @@
     <script src="jquery-3.2.1.js"></script>
     <script>
         $(document).ready(function () {
-            $('h1').addClass(function (index) {
-                return 'class' + index;
+            $('h1').addClass(function (i) {
+                return 'class' + i;
             });
 
             $('h1').toggleClass('selected');
             var src = $('img').attr('src');
+            var src_array = [];
+            $('img').each(function (index, item) {
+                //src_array.push($(this).attr('src'));
+                src_array.push(this.src);
+            });
+
+            $('img').each(function (index, item) {
+                //src_array.push($(this).attr('src'));
+                src_array.push(this.src);
+            });
+
+            alert(src_array);
+
             $('img').attr('width', function (index) {
                 return (index + 1) * 100;
             });
