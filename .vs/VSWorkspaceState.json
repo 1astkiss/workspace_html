@@ -3,13 +3,14 @@
     "",
     "\\Html5Study",
     "\\ModernWeb-JS",
+    "\\ModernWeb-JS\\ch10",
+    "\\ModernWeb-JS\\ch11",
+    "\\ModernWeb-JS\\ch13",
     "\\ModernWeb-JS\\ch22",
     "\\ModernWeb-JS\\ch22\\public",
     "\\ModernWeb-JS\\ch23",
-    "\\ModernWeb-JS\\ch23\\public",
-    "\\ModernWeb-JS\\ch24",
-    "\\ModernWeb-JS\\ch24\\public"
+    "\\ModernWeb-JS\\ch23\\public"
   ],
-  "SelectedNode": "\\ModernWeb-JS\\ch24\\public\\index.html",
+  "SelectedNode": "\\ModernWeb-JS\\ch13\\HTMLPage13..8.2.html",
   "PreviewInSolutionExplorer": false
 }
