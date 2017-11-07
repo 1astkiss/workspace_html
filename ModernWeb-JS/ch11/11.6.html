@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        var counterA;
+        var counterB;
+
+        var aa = function () {
+            alert('aa');
+            counterA = document.getElementById('counter-a');
+            counterB = document.getElementById('counter-b');
+
+
+            counterA.innerHTML = Number(counterA.innerHTML) + 1;
+
+
+        };
+    </script>
+</head>
+<body>
+    <button id="button-a" onclick="aa()">ButtonA</button>
+    <button id="button-b">ButtonB</button>
+    <h1>Button-A <span id="counter-a">0</span></h1>
+    <h1>Button-B <span id="counter-b">0</span></h1>
+</body>
+</html>

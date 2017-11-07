@@ -8,11 +8,12 @@
     <!--<script src="jquery-2.1.0-vsdoc.js"></script>-->
     <script>
         $(document).ready(function () {
-            //alert("ready!!!");
-            //setTimeout(function () {
-            //    var value = $('select > option:selected').val();
-            //    alert(value);
-            //}, 5000)
+            var intervalID = setInterval(function () {
+                var value = $('select > option:selected').val();
+                alert(value);
+            }, 5000);
+
+            setTimeout(function () { clearInterval(intervalID); }, 1000);
 
             var array = [
                 { name: "Hanbit", link: "http://hanbit.co.kr" },
