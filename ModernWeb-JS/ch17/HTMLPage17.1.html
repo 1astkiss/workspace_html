@@ -11,8 +11,11 @@
     <script>
 
         $(document).ready(function () {
-            $('button').click(function () {
-                $('.page').fadeToggle(2000);
+            $('#btn1').click(function () {
+                $('.page').slideToggle(2000);
+            });
+            $('#btn2').click(function () {
+                $('.page').slideDown(2000);
             });
 
         });
@@ -20,7 +23,8 @@
     </script>
 </head>
 <body>
-    <button>Toggle Show</button>
+    <button id="btn1">Toggle Show</button>
+    <button id="btn2">Toggle Show</button>
     <div class="page">
         <h1>Lorem ipsum dolor sit amet</h1>
         <p>

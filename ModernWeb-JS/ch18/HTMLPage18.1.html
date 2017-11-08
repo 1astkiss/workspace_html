@@ -6,20 +6,24 @@
     <title></title>
     <link rel="stylesheet" href="jquery-ui.min.css" />
     <style>
-        * { margin:0px; padding: 0px;}
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
         #canvas {
-            background:gray;
-            width:600px;
-            height:400px;
-            position:relative;
-            overflow:hidden;
+            background: gray;
+            position: relative;
+            width: 600px;
+            height: 400px;
+            overflow:visible;
         }
 
         .inner-box {
-            background:orange;
-            width:100px;
-            height:100px;
-            position:absolute;
+            background: orange;
+            width: 100px;
+            height: 100px;
+            position: absolute;
         }
     </style>
     <script src="jquery-3.2.1.js"></script>
@@ -40,7 +44,6 @@
 </head>
 <body>
     <h1>Test Header</h1>
-
     <div id="canvas">
         <div class="inner-box"></div>
         <div class="inner-box"></div>
@@ -48,7 +51,6 @@
         <div class="inner-box"></div>
         <div class="inner-box"></div>
     </div>
-    
     <h1>Test Header</h1>
 </body>
 </html>
