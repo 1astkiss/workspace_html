@@ -62,7 +62,39 @@
 
                     $target.animate({ left: '-=' + distance }, 0);
                     $target.stop(true);
+                } else {
+
+                    //function movePosition(direction) {
+                    //    var changePosition = nowPosition + direction;
+
+                    //    if (0 <= changePosition && changePosition < $items.length) {
+                    //        nowPosition = changePosition;
+                    //    }
+
+                    //    $target.animate({
+                    //        'left': -nowPosition * option.width
+                    //    }, 'fast');
+                    //    event.preventDefault();
+
+                    //    return;
+
+                    //}
+
+                    //if ((originalLeft - event.clientX) > (option.width / 4)) {
+                    //    movePosition(+1);
+
+                    //} else if ((originalLeft - event.clientX) < -(option.width / 4)) {
+                    //    movePosition(-1);
+                    //}
+
                 }
+
+                alert($container.css('top'));
+                if (event.clientX == $container.css('left')) {
+                    $target.mouseup();
+                }
+
+
                 event.preventDefault();
             });
 
